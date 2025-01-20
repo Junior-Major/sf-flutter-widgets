@@ -86,16 +86,40 @@ class _ScrollHeadState extends State<ScrollHead> {
         alignment: alignment,
         margin: edgeInsets,
         child: Material(
-          color: Colors.grey,
-          borderRadius: const BorderRadius.all(Radius.circular(7.0)),
+          color: Colors.transparent, // Set Material color to transparent
+          borderRadius: const BorderRadius.all(Radius.circular(12.0)),
           child: Container(
-            constraints: BoxConstraints.tight(
-              size,
+          constraints: BoxConstraints.tight(
+            Size(24.0, 60.0),
+            ),
+          decoration: BoxDecoration(
+            color: Color(0xFFEDC05E), // Fill color
+            borderRadius: const BorderRadius.all(Radius.circular(15.0)),
+            border: Border.all(
+              color: Colors.black, // Border color
+              width: 2.0, // Border width
             ),
           ),
+          ),
         ),
-      ),
+      )
     );
+    // return Visibility(
+    //   visible: visible,
+    //   child: Container(
+    //     alignment: alignment,
+    //     margin: edgeInsets,
+    //     child: Material(
+    //       color: _pdfViewerThemeData?.scrollHeadStyle?.backgroundColor ?? Colors.grey,
+    //       borderRadius: const BorderRadius.all(Radius.circular(7.0)),
+    //       child: Container(
+    //         constraints: BoxConstraints.tight(
+    //           size,
+    //         ),
+    //       ),
+    //     ),
+    //   ),
+    // );
   }
 
   @override
