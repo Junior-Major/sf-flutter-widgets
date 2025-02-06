@@ -78,6 +78,7 @@ class _ScrollHeadState extends State<ScrollHead> {
     super.dispose();
   }
 
+  /// <HACK>
   Widget _createScrollBar(
       bool visible, Alignment alignment, EdgeInsets edgeInsets, Size size) {
     return Visibility(
@@ -90,16 +91,17 @@ class _ScrollHeadState extends State<ScrollHead> {
           borderRadius: const BorderRadius.all(Radius.circular(12.0)),
           child: Container(
           constraints: BoxConstraints.tight(
-            Size(24.0, 60.0),
+            Size(12.0, 58.0),
             ),
           decoration: BoxDecoration(
             color: Color(0xFFEDC05E), // Fill color
             borderRadius: const BorderRadius.all(Radius.circular(15.0)),
-            border: Border.all(
-              color: Colors.black, // Border color
-              width: 2.0, // Border width
-            ),
+            // border: Border.all(
+            //   color: Colors.transparent, // Border color
+            //   width: 2.0, // Border width
+            // ),
           ),
+            child: Image.asset('assets/Icons/scroll.png'),
           ),
         ),
       )
@@ -121,6 +123,7 @@ class _ScrollHeadState extends State<ScrollHead> {
     //   ),
     // );
   }
+  /// </HACK>
 
   @override
   Widget build(BuildContext context) {

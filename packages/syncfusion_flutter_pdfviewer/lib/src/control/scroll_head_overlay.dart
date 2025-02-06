@@ -339,7 +339,7 @@ class ScrollHeadOverlayState extends State<ScrollHeadOverlay> {
     final bool enableScrollHead = hasBiggerWidth || hasBiggerHeight;
     bool canShowScrollHead =
         !enableScrollHead ? enableScrollHead : widget.canShowScrollHead;
-    // if (kIsDesktop && enableScrollHead) {
+    // if (kIsDesktop && enableScrollHead) { /// HACK
     //   canShowScrollHead = true;
     // }
     if (widget.pdfViewerController.pageCount == 1) {
